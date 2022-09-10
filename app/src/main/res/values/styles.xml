@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="botao">bota</style>
+
+    <style name="botaoDestaque">botaoDestaque</style>
+
+    <style name="visorPrincipal"></style>
+
+    <style name="visor"></style>
+
+    <style name="tema"></style>
+</resources>
