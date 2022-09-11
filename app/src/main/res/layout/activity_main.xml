@@ -1,40 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/tema"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.3"
-        android:orientation="vertical">
+    <TextView
+        android:layout_margin="20dp"
+        android:id="@+id/resultado"
+        style="@style/visor"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40sp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:orientation="vertical">
+    <TextView
+        android:layout_margin="20dp"
+        android:id="@+id/expressao"
+        style="@style/visor"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40sp" />
 
-            <TextView
-                android:id="@+id/visor"
-                style="@style/visor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center" />
-
-
-            <TextView
-                android:id="@+id/visorPrincipal"
-                style="@style/visorPrincipal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center" />
-        </LinearLayout>
-
-    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,143 +31,191 @@
         android:layout_weight="0.14"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
             android:id="@+id/letra_c"
-            android:textSize='20dp'
             style="@style/botao"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="C" />
+            android:layout_margin="5dp"
+            android:text="C"
+            android:layout_weight="0.25"
+            android:textSize='60sp'
+            app:autoSizeTextType="none"
+            app:fontFamily="serif-monospace" />
 
-        <TextView
+        <Button
             android:id="@+id/calc_porcentagem"
             style="@style/botao"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.25"
-            android:text="%" />
+            android:layout_margin="5dp"
+            android:text="%"
+            android:textSize="12sp"
+            app:autoSizeTextType="uniform" />
 
-        <TextView
+        <Button
             android:id="@+id/calc_dividir"
             style="@style/botaoDestaque"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.25"
-            android:text="÷" />
+            android:layout_margin="5dp"
+            android:text="÷"
+            app:autoSizeTextType="uniform" />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_margin="5dp"
+
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.14"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
             android:id="@+id/numero_sete"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="7" />
+            android:text="7"
+            app:autoSizeTextType="uniform" />
 
-        <TextView
+        <Button
+            android:layout_margin="5dp"
+            android:onClick="onPress"
             android:id="@+id/numero_oito"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="8" />
+            android:text="8"
+            app:autoSizeTextType="uniform" />
 
-        <TextView
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
             android:id="@+id/numero_nove"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="9" />
+            android:text="9"
+            app:autoSizeTextType="uniform" />
 
-        <TextView
+        <Button
+            android:layout_margin="5dp"
+
             android:id="@+id/letra_x"
             style="@style/botaoDestaque"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="×" />
+            android:text="×"
+            app:autoSizeTextType="uniform" />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.14"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
             android:id="@+id/numero_quatro"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="4" />
+            android:text="4"
+            app:autoSizeTextType="uniform" />
 
-        <TextView
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
             android:id="@+id/numero_cinco"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="5" />
+            android:text="5"
+            app:autoSizeTextType="uniform" />
 
-        <TextView
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
             android:id="@+id/numero_seis"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="6" />
+            android:text="6"
+            app:autoSizeTextType="uniform" />
 
-        <TextView
+        <Button
+            android:layout_margin="5dp"
+            android:onClick="onPress"
             android:id="@+id/calc_menos"
             style="@style/botaoDestaque"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="-" />
+            android:text="-"
+            app:autoSizeTextType="uniform" />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.14"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
+            android:onClick="onPress"
+            android:id="@+id/numero_um"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="1" />
+            android:text="1"
+            app:autoSizeTextType="uniform" />
 
-        <TextView
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
+            android:id="@+id/numero_dois"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="2" />
+            android:text="2"
+            app:autoSizeTextType="uniform" />
 
-        <TextView
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
+            android:id="@+id/numero_tres"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="3" />
+            android:text="3"
+            app:autoSizeTextType="uniform" />
 
-        <TextView
+        <Button
+            android:layout_margin="5dp"
             android:id="@+id/operador_soma"
             style="@style/botaoDestaque"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="+" />
+            android:text="+"
+            app:autoSizeTextType="uniform" />
     </LinearLayout>
 
     <LinearLayout
@@ -187,36 +224,47 @@
         android:layout_weight="0.14"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
+            android:layout_margin="5dp"
             android:id="@+id/numero_zero"
             style="@style/botao"
-            android:layout_width="10dp"
+            android:layout_width="15dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:text="0" />
-        <TextView
+            android:layout_weight="0.2"
+            android:text="0"
+            app:autoSizeTextType="uniform"
+            android:onClick="onPress"
+            />
+
+
+        <Button
+            android:onClick="onPress"
+            android:id="@+id/btn_ponto"
+            android:layout_margin="5dp"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="X" />
-
-        <TextView
+            android:text="."
+            app:autoSizeTextType="uniform" />
+        <Button
+            android:layout_margin="5dp"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="." />
+            android:text="BackSpace"
+            app:autoSizeTextType="uniform" />
 
 
-
-
-        <TextView
+        <Button
+            android:layout_margin="5dp"
             style="@style/botaoDestaque"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:text="=" />
+            android:text="="
+            app:autoSizeTextType="uniform" />
 
 
     </LinearLayout>
