@@ -8,22 +8,44 @@ import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
-    val number1 = 0.0
+
+    var numero1:Double = 0.0
+    var oper : Int = 0
     lateinit var tv_num1: TextView
     lateinit var tv_num2: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    tv_num1 = findViewById(R.id.resultado)
-    tv_num2 = findViewById(R.id.expressao)
+        tv_num1 = findViewById(R.id.resultado)
+        tv_num2 = findViewById(R.id.expressao)
+        val botaoapagador: Button = findViewById(R.id.botaoapagar)
+        val botaoigual: Button = findViewById(R.id.btn_igual)
 
 
+        botaoigual.setOnClickListener {
+            var numero2: Double = tv_num2.text.toString().toDouble()
+
+            var resp: Double = 0.0
+            when(oper){
+                1-> resp = numero1 + numero2
+                2 -> resp = numero1 - numero2
+                3 -> resp = numero1 * numero2
+                4 -> resp = numero1 / numero2
+            }
+            tv_num2.setText(resp.toString())
+            tv_num1.setText("")
+        }
+    botaoapagador.setOnClickListener {
+            tv_num1.setText("")
+            tv_num2.setText("")
+            numero1 = 0.0
+            oper = 0
+         }
     }
 
     fun onPress(view: View){
-
-        val tv_num2: TextView = findViewById(R.id.resultado)
+       // val tv_num2: TextView = findViewById(R.id.resultado)
         var num2: String = tv_num2.text.toString()
 
         when(view.id){
@@ -40,17 +62,33 @@ class MainActivity : AppCompatActivity() {
             R.id.btn_ponto -> tv_num2.setText(num2+".")
             }
         }
-  /*  fun clickOperation(view: View){
-        number1 = tv_num2.text.toString().toDouble()
-
+    fun clickOperation(view: View){
+        numero1 = tv_num2.text.toString().toDouble()
+        var num2_text: String = tv_num2.text.toString()
         when(view.id){
+            R.id.operador_soma ->{
+                tv_num1.setText(num2_text+ "+")
+                oper = 1
+            }
+            R.id.operador_multiplicar -> {
+                tv_num1.setText(num2_text+ "*")
+                oper = 2
+            }
+            R.id.calc_menos -> {
+                tv_num1.setText(num2_text+ "*")
+                oper = 3
 
+            }
+
+            R.id.calc_dividir ->{
+                tv_num1.setText(num2_text+ "/")
+            oper = 4
+            }
         }
-
     }
-   */
+    }
 
-}
+
 
 
 

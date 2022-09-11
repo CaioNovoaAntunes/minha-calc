@@ -32,9 +32,9 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/letra_c"
+            android:id="@+id/botaoapagar"
             style="@style/botao"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:text="C"
@@ -54,6 +54,7 @@
             app:autoSizeTextType="uniform" />
 
         <Button
+
             android:id="@+id/calc_dividir"
             style="@style/botaoDestaque"
             android:layout_width="wrap_content"
@@ -105,13 +106,13 @@
             app:autoSizeTextType="uniform" />
 
         <Button
-            android:layout_margin="5dp"
-
-            android:id="@+id/letra_x"
+            android:id="@+id/operador_multiplicar"
             style="@style/botaoDestaque"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:layout_weight="0.25"
+            android:onClick="clickOperation"
             android:text="×"
             app:autoSizeTextType="uniform" />
     </LinearLayout>
@@ -157,8 +158,8 @@
             app:autoSizeTextType="uniform" />
 
         <Button
+            android:onClick="clickOperation"
             android:layout_margin="5dp"
-            android:onClick="onPress"
             android:id="@+id/calc_menos"
             style="@style/botaoDestaque"
             android:layout_width="0dp"
@@ -208,6 +209,7 @@
             app:autoSizeTextType="uniform" />
 
         <Button
+            android:onClick="clickOperation"
             android:layout_margin="5dp"
             android:id="@+id/operador_soma"
             style="@style/botaoDestaque"
@@ -258,6 +260,7 @@
 
 
         <Button
+            android:id="@+id/btn_igual"
             android:layout_margin="5dp"
             style="@style/botaoDestaque"
             android:layout_width="0dp"
