@@ -17,7 +17,7 @@
 
     <TextView
         android:layout_margin="20dp"
-        android:id="@+id/expressao"
+        android:id="@+id/lt_expressao"
         style="@style/visor"
         android:layout_width="333dp"
         android:layout_height="wrap_content"
