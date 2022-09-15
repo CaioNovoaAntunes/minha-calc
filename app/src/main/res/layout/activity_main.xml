@@ -75,7 +75,7 @@
         <Button
             android:onClick="onPress"
             android:layout_margin="5dp"
-            android:id="@+id/numero_sete"
+            android:id="@+id/numero_Sete"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -86,7 +86,7 @@
         <Button
             android:layout_margin="5dp"
             android:onClick="onPress"
-            android:id="@+id/numero_oito"
+            android:id="@+id/numero_Oito"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -97,7 +97,7 @@
         <Button
             android:onClick="onPress"
             android:layout_margin="5dp"
-            android:id="@+id/numero_nove"
+            android:id="@+id/numero_Nove"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -106,65 +106,13 @@
             app:autoSizeTextType="uniform" />
 
         <Button
-            android:id="@+id/operador_multiplicar"
+            android:id="@+id/calculador_menos"
             style="@style/botaoDestaque"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:layout_weight="0.25"
             android:onClick="clickOperation"
-            android:text="×"
-            app:autoSizeTextType="uniform" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_margin="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.14"
-        android:orientation="horizontal">
-
-        <Button
-            android:onClick="onPress"
-            android:layout_margin="5dp"
-            android:id="@+id/numero_quatro"
-            style="@style/botao"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.25"
-            android:text="4"
-            app:autoSizeTextType="uniform" />
-
-        <Button
-            android:onClick="onPress"
-            android:layout_margin="5dp"
-            android:id="@+id/numero_cinco"
-            style="@style/botao"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.25"
-            android:text="5"
-            app:autoSizeTextType="uniform" />
-
-        <Button
-            android:onClick="onPress"
-            android:layout_margin="5dp"
-            android:id="@+id/numero_seis"
-            style="@style/botao"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.25"
-            android:text="6"
-            app:autoSizeTextType="uniform" />
-
-        <Button
-            android:onClick="clickOperation"
-            android:layout_margin="5dp"
-            android:id="@+id/calc_menos"
-            style="@style/botaoDestaque"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.25"
             android:text="-"
             app:autoSizeTextType="uniform" />
     </LinearLayout>
@@ -178,7 +126,59 @@
 
         <Button
             android:onClick="onPress"
-            android:id="@+id/numero_um"
+            android:layout_margin="5dp"
+            android:id="@+id/numero_Quatro"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="4"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
+            android:id="@+id/numero_Cinco"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="5"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
+            android:id="@+id/numero_Seis"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="6"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:onClick="clickOperation"
+            android:layout_margin="5dp"
+            android:id="@+id/calc_multiplicador"
+            style="@style/botaoDestaque"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="*"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="onPress"
+            android:id="@+id/numero_Um"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -189,7 +189,7 @@
         <Button
             android:onClick="onPress"
             android:layout_margin="5dp"
-            android:id="@+id/numero_dois"
+            android:id="@+id/numero_Dois"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -200,7 +200,7 @@
         <Button
             android:onClick="onPress"
             android:layout_margin="5dp"
-            android:id="@+id/numero_tres"
+            android:id="@+id/numero_Tres"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -228,7 +228,7 @@
 
         <Button
             android:layout_margin="5dp"
-            android:id="@+id/numero_zero"
+            android:id="@+id/numero_Zero"
             style="@style/botao"
             android:layout_width="15dp"
             android:layout_height="match_parent"
@@ -241,7 +241,7 @@
 
         <Button
             android:onClick="onPress"
-            android:id="@+id/btn_ponto"
+            android:id="@+id/btn_Ponto"
             android:layout_margin="5dp"
             style="@style/botao"
             android:layout_width="0dp"
