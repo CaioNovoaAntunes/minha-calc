@@ -54,19 +54,18 @@
             app:autoSizeTextType="uniform" />
 
         <Button
-
-            android:id="@+id/calc_dividir"
+            android:id="@+id/operadorDivisao"
             style="@style/botaoDestaque"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
-            android:text="÷"
+            android:text="/"
+            android:onClick="clickOperation"
             app:autoSizeTextType="uniform" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_margin="5dp"
-
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.14"
@@ -75,7 +74,7 @@
         <Button
             android:onClick="onPress"
             android:layout_margin="5dp"
-            android:id="@+id/numero_Sete"
+            android:id="@+id/numeroSete"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -86,7 +85,7 @@
         <Button
             android:layout_margin="5dp"
             android:onClick="onPress"
-            android:id="@+id/numero_Oito"
+            android:id="@+id/numeroOito"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -97,7 +96,7 @@
         <Button
             android:onClick="onPress"
             android:layout_margin="5dp"
-            android:id="@+id/numero_Nove"
+            android:id="@+id/numeroNove"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -106,7 +105,7 @@
             app:autoSizeTextType="uniform" />
 
         <Button
-            android:id="@+id/calculador_menos"
+            android:id="@+id/operadorMenos"
             style="@style/botaoDestaque"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -127,7 +126,7 @@
         <Button
             android:onClick="onPress"
             android:layout_margin="5dp"
-            android:id="@+id/numero_Quatro"
+            android:id="@+id/numeroQuatro"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -138,7 +137,7 @@
         <Button
             android:onClick="onPress"
             android:layout_margin="5dp"
-            android:id="@+id/numero_Cinco"
+            android:id="@+id/numeroCinco"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -149,7 +148,7 @@
         <Button
             android:onClick="onPress"
             android:layout_margin="5dp"
-            android:id="@+id/numero_Seis"
+            android:id="@+id/numeroSeis"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -160,7 +159,7 @@
         <Button
             android:onClick="clickOperation"
             android:layout_margin="5dp"
-            android:id="@+id/calc_multiplicador"
+            android:id="@+id/operadorMultiplicacao"
             style="@style/botaoDestaque"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -178,7 +177,7 @@
 
         <Button
             android:onClick="onPress"
-            android:id="@+id/numero_Um"
+            android:id="@+id/numeroUm"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -189,7 +188,7 @@
         <Button
             android:onClick="onPress"
             android:layout_margin="5dp"
-            android:id="@+id/numero_Dois"
+            android:id="@+id/numeroDois"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -200,7 +199,7 @@
         <Button
             android:onClick="onPress"
             android:layout_margin="5dp"
-            android:id="@+id/numero_Tres"
+            android:id="@+id/numeroTres"
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -211,7 +210,7 @@
         <Button
             android:onClick="clickOperation"
             android:layout_margin="5dp"
-            android:id="@+id/operador_soma"
+            android:id="@+id/operadorSoma"
             style="@style/botaoDestaque"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -228,7 +227,7 @@
 
         <Button
             android:layout_margin="5dp"
-            android:id="@+id/numero_Zero"
+            android:id="@+id/numeroZero"
             style="@style/botao"
             android:layout_width="15dp"
             android:layout_height="match_parent"
@@ -241,7 +240,7 @@
 
         <Button
             android:onClick="onPress"
-            android:id="@+id/btn_Ponto"
+            android:id="@+id/btnPonto"
             android:layout_margin="5dp"
             style="@style/botao"
             android:layout_width="0dp"
@@ -260,7 +259,7 @@
 
 
         <Button
-            android:id="@+id/btn_igual"
+            android:id="@+id/btnIgual"
             android:layout_margin="5dp"
             style="@style/botaoDestaque"
             android:layout_width="0dp"
