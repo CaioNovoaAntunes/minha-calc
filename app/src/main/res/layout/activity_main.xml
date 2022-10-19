@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/tema"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_margin="20dp"
+        android:id="@+id/resultado"
+        style="@style/visor"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_margin="20dp"
+        android:id="@+id/lt_expressao"
+        style="@style/visor"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/botaoapagar"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="C"
+            android:layout_weight="0.25"
+            android:textSize='60sp'
+            app:autoSizeTextType="none"
+            app:fontFamily="serif-monospace" />
+
+        <Button
+            android:id="@+id/calc_porcentagem"
+            style="@style/botao"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="%"
+            android:textSize="12sp"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/operadorDivisao"
+            style="@style/botaoDestaque"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="/"
+            android:onClick="clickOperation"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
+            android:id="@+id/numeroSete"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="7"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:onClick="onPress"
+            android:id="@+id/numeroOito"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="8"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
+            android:id="@+id/numeroNove"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="9"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:id="@+id/operadorMenos"
+            style="@style/botaoDestaque"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="0.25"
+            android:onClick="clickOperation"
+            android:text="-"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
+            android:id="@+id/numeroQuatro"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="4"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
+            android:id="@+id/numeroCinco"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="5"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
+            android:id="@+id/numeroSeis"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="6"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:onClick="clickOperation"
+            android:layout_margin="5dp"
+            android:id="@+id/operadorMultiplicacao"
+            style="@style/botaoDestaque"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="*"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="onPress"
+            android:id="@+id/numeroUm"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="1"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
+            android:id="@+id/numeroDois"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="2"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:onClick="onPress"
+            android:layout_margin="5dp"
+            android:id="@+id/numeroTres"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="3"
+            app:autoSizeTextType="uniform" />
+
+        <Button
+            android:onClick="clickOperation"
+            android:layout_margin="5dp"
+            android:id="@+id/operadorSoma"
+            style="@style/botaoDestaque"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="+"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/numeroZero"
+            style="@style/botao"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:text="0"
+            app:autoSizeTextType="uniform"
+            android:onClick="onPress"
+            />
+
+
+        <Button
+            android:onClick="onPress"
+            android:id="@+id/btnPonto"
+            android:layout_margin="5dp"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="."
+            app:autoSizeTextType="uniform" />
+        <Button
+            android:layout_margin="5dp"
+            style="@style/botao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="BackSpace"
+            app:autoSizeTextType="uniform" />
+
+
+        <Button
+            android:id="@+id/btnIgual"
+            android:layout_margin="5dp"
+            style="@style/botaoDestaque"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="="
+            app:autoSizeTextType="uniform" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
